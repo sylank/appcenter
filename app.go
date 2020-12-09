@@ -14,6 +14,7 @@ type App struct {
 // NewRelease ... for more info: https://docs.microsoft.com/en-us/appcenter/distribution/uploading#uploading-using-the-apis
 func (a App) NewRelease(filePath string, opts ...ReleaseOptions) (Release, error) {
 	// send file upload request
+	fmt.Println("Hello from FORKED appcenter lib")
 	var (
 		postURL      = fmt.Sprintf("%s/v0.1/apps/%s/%s/release_uploads", baseURL, a.owner, a.name)
 		postBody     interface{}
